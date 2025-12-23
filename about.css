@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Karma:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    
+}
+.navbar nav{
+    width: 80%;
+    margin:30px auto;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar nav h2{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      font-family: 'JetBrains Mono', monospace;
+}
+.navbar nav ul li a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      font-family: 'Inter', sans-serif;
+    
+
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+.navbar nav ul {
+    display: flex;
+    gap: 60px;
+}
+.navbar nav ul li{
+        list-style-type: none;
+}
+
+.navbar nav button{
+    padding: 7px 15px;
+    border: 3px solid #CCC3CD;
+    border-radius: 10px;
+    
+}
+.nav-btn2{
+     background: linear-gradient(135deg, #B777F3, #E689BC);
+}
+
+/* hero-container */
+
+.hero-container{
+    width: 100%;
+    height: 100vh;
+
+}
+.hero-fullbox {
+    background-image: url(./hero-img.png);
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+.white-box{
+    width: 508px;
+    height: 306px;
+   background: linear-gradient(to right, #DBD0E0, #CBC5E1);
+    border-radius: 20px;
+    box-shadow: #DBD0E0 0px 30px 90px;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+
+.hero-fullbox h2{
+    font-size: 100px;
+    font-weight: 700;
+    margin-left: 300px;
+    padding-top: 350px;
+     font-family: 'Inter', sans-serif;
+}
+.hero-fullbox p{
+    font-size: 24px;
+    font-weight: 400;
+     font-family: 'Inter', sans-serif;
+     margin-left: 240px;
+}
+
+/* etech-container */
+
+.etech-container{
+    width: 100%;
+
+}
+
+.etech-fullbox {
+    width: 60%;
+    margin: auto;
+}
+
+.etech-fullbox{
+    display: flex;
+    gap: 50px;
+    background-color: white;
+    margin-top: -50px;
+}
+
+.etech-fullbox div{
+    width: 50%;
+    margin-top: 50px;
+}
+.etech-fullbox div h2{
+    font-size: 45px;
+    font-weight: 600;
+       font-family: 'Inter', sans-serif;
+       text-align: center;
+}
+
+.etech-fullbox img{
+    width: 418px;
+    height: 447px;
+}
+
+.etech-fullbox div p{
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+/* why-container */
+
+.why-container{
+    width: 100%;
+    margin-top: 100px;
+}
+.why-fullbox {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 100px;
+}
+
+.why-fullbox img{
+    width: 599px;
+    height: 899px;
+
+}
+.why-fullbox div h2{
+    font-size: 34px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+.why-fullbox div .why-para{
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+.why-fullbox div .why-content-fullbox{
+    display: flex;
+    column-gap: 150px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.why-fullbox div p{
+    width: 150px;
+    font-size:25px ;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+/* team-conatiner */
+
+.team-conatiner{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.team-fullbox{
+    width: 80%;
+    margin: auto;
+
+}
+.team-fullbox h2{
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.team-fullbox p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.team-img-fullbox{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.team-img-fullbox div img{
+          width: 308px;
+          height: 426px;
+          background-color: pink;
+}
+
+.team-img-fullbox .team-two{
+                background-color: purple;
+}
+
+.team-img-fullbox .team-two{
+    background-color: rgb(176, 53, 176);
+}
+
+.team-img-fullbox .team-three{
+    background-color: rgba(70, 95, 85, 0.748);
+}
+
+
+
+/* footer */
+
+.footer-container{
+    margin-top: 50px;
+    width: 100%;
+    /* height: 100vh; */
+     background: linear-gradient(135deg, #B777F3, #E689BC);
+     border-top: 2px solid white;
+}
+
+.footer-fullbox{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+}
+.footer-box1 div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-box1 h2{
+       font-family: 'Inter', sans-serif;
+       font-size: 30px;
+       font-weight: 400;
+       color: white;
+}
+.footer-box1 img{
+    width: 84px;
+    height: 84px;
+}
+.footer-box1 p{
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight:400;
+}
+.footer-box3 div{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-box4 div{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-fullbox h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-fullbox ul li{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
+
+.footer-box3 p{
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
+
+.footer-box3 i{
+     font-size: 19px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
+.footer-box4 p{
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
+.footer-box4  i{
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
