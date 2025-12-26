@@ -1104,7 +1104,7 @@ img.profile-pic{
 
   .navbar nav ul{
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: -270px;  
     width: 220px;
     height: 100vh;
@@ -1118,7 +1118,7 @@ img.profile-pic{
 
 
   #menu-toggle:checked ~ ul{
-    right: 0;
+    right: -40px;
   }
 
   .navbar .click-bar{
