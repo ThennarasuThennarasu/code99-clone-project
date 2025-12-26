@@ -7,7 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Karma:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
+html, body {
+  overflow-x: hidden;
+}
 /* Navbar */
 .navbar{
     width: 100%;
@@ -63,6 +65,49 @@
      background: linear-gradient(135deg, #B777F3, #E689BC);
 }
 
+.navbar .click-bar{
+    font-size: 24px;
+    position: absolute;
+    right: -40px;
+    display: none;
+}
+#menu-toggle{
+  display: none;
+}
+
+
+@media (max-width: 575.98px){
+
+   .navbar nav{
+    position: relative;
+  }
+
+  .navbar nav ul{
+    position: absolute;
+    top: 50px;
+    right: -270px;  
+    width: 220px;
+    height: 100vh;
+    background: #777;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+
+  #menu-toggle:checked ~ ul{
+    right: -40px;
+  }
+
+  .navbar .click-bar{
+    display: block;
+    cursor: pointer;
+  }
+
+}
+
 
 /* jgkjfkuuuu */
 
@@ -89,7 +134,7 @@
 
 .teacher-form-fullbox .form-fullbox{
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      height: 100vh;
+      /* height: 100vh; */
       background-color: white;
       width: 50%;
       border-radius: 30px;
@@ -163,6 +208,7 @@
     margin-top: 30px;
     margin-left: 30px;
     border: none;
+    margin-bottom: 30px;
     border-radius: 10px;
      background: linear-gradient(135deg, #B777F3, #E689BC);
 }
@@ -233,6 +279,8 @@
 
 .footer-fullbox{
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
     width: 90%;
     margin: auto;
     justify-content: space-between;
@@ -308,4 +356,58 @@
     font-weight: 400;
     color: white;
     margin-top: 10px;
+}
+
+
+
+@media (max-width: 575.98px){
+    .teacher-form-fullbox{
+        flex-wrap: wrap;
+    }
+    .teacher-form-fullbox .teacher-form-content{
+        width: 100%;
+    }
+    .teacher-form-container{
+        margin-top: -160px;
+    }
+    .teacher-form-fullbox{
+        width: 95%;
+    }
+    .teacher-form-fullbox .form-fullbox{
+        width: 100%;
+    }
+    .form-fullbox .form-row-one input{
+        width: 90%;
+    }
+    .form-fullbox .form-row-one{
+        margin-left: 50px;
+    }
+    .form-row-one{
+        margin-top: 30px;
+    }
+    .teacher-form-content h2{
+        font-size: 45px;
+        text-align: center;
+        margin-top: 180px;
+    }
+    .partner-container{
+        margin-top: 50px;
+    }
+    .partner-fullbox button{
+        width: 200px;
+        font-size: 17px;
+    }
+    .partner-fullbox p{
+        font-size: 20px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-left: -50px;
+    }
+    .partner-fullbox{
+        width: 100%;
+    }
+    .footer-container{
+        margin-top: 0px;
+    }
 }

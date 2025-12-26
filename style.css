@@ -7,6 +7,11 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Karma:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+html, body {
+  overflow-x: hidden;
+}
+
 /* Navbar */
 .navbar{
     width: 100%;
@@ -61,6 +66,75 @@
 .nav-btn2{
      background: linear-gradient(135deg, #B777F3, #E689BC);
 }
+
+
+
+
+
+.navbar h2 {
+    transition: transform 0.3s ease;
+}
+
+.navbar h2:hover {
+    transform: scale(1.05);
+}
+
+
+.navbar nav ul li a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(135deg, #B777F3, #E689BC);
+    transition: width 0.3s ease;
+}
+
+.navbar nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+.navbar nav ul li a i {
+    transition: transform 0.3s ease;
+}
+
+.navbar nav ul li a:hover i {
+    transform: rotate(180deg);
+}
+
+
+.navbar nav button {
+    transition: all 0.3s ease;
+}
+
+.navbar nav button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(183, 119, 243, 0.4);
+}
+
+
+
+.navbar .click-bar{
+    font-size: 24px;
+    position: absolute;
+    right: -40px;
+    display: none;
+}
+#menu-toggle{
+  display: none;
+}
+
+
+
+
+
 
 /* hero */
 
@@ -217,6 +291,10 @@
     color: #B777F3;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
+    z-index: 3;
+} 
+.hero div p{
+       width: 400px;
 }
 
 .box-student3 p{
@@ -231,6 +309,97 @@
     text-align: left;
     margin-left: -100px;
 }
+
+.hero div:first-child {
+    animation: herotext 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes herotext {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.img-back {
+    animation: rotateCircle 20s linear infinite;
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-pic {
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.box-student,
+.box-student2,
+.box-student3 {
+    animation: popBox 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.box-student { animation-delay: 0.5s; }
+.box-student2 { animation-delay: 0.8s; }
+.box-student3 { animation-delay: 1.1s; }
+
+@keyframes popBox {
+    from {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-container button {
+    transition: all 0.3s ease;
+}
+
+.hero-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(183, 119, 243, 0.4);
+}
+
+.hero-container a i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(183, 119, 243, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(183, 119, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(183, 119, 243, 0);
+    }
+}
+
 
 /* tool-conatiner */
 
@@ -260,6 +429,26 @@
 .maigc-leap{
     width: 260px !important;
 }
+
+.tool-box img{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: logoReveal 0.8s ease forwards;
+}
+
+.tool-box img:nth-child(1){ animation-delay: 0.2s; }
+.tool-box img:nth-child(2){ animation-delay: 0.4s; }
+.tool-box img:nth-child(3){ animation-delay: 0.6s; }
+.tool-box img:nth-child(4){ animation-delay: 0.8s; }
+.tool-box img:nth-child(5){ animation-delay: 1s; }
+
+@keyframes logoReveal{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* search-course */
 
@@ -336,6 +525,7 @@
 
 .search-course-box{ 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 80px;
 }
@@ -405,13 +595,75 @@ i.icon-two{
 
 }
 
+.search-course-fullbox h2{
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.search-course-fullbox h2{
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.search-course-content-box h3{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideText 0.8s ease forwards;
+}
+
+.Online-Degrees{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideText 0.8s ease forwards;
+}
+
+.Online-Degrees:nth-child(2){ animation-delay: 0.3s; }
+.Online-Degrees:nth-child(3){ animation-delay: 0.5s; }
+.Online-Degrees:nth-child(4){ animation-delay: 0.7s; }
+.Online-Degrees:nth-child(5){ animation-delay: 0.9s; }
+
+@keyframes slideText{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.Online-Degrees i{
+    transition: transform 0.3s ease;
+}
+
+.Online-Degrees:hover i{
+    transform: scale(1.15) rotate(5deg);
+}
+
+
 /* popular-course */
 
 .popular-course-container{
     width: 100%;
     background: linear-gradient(135deg, #B777F3, #E689BC);
      font-family: 'Inter', sans-serif;
-     height: 110vh;
+     /* height: 110vh; */
 
 }
 .popular-course-fullbox{
@@ -457,6 +709,7 @@ i.icon-two{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .tag,
@@ -558,9 +811,10 @@ img.profile-pic{
 
 .popular-course-card-fullbox{
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
+    row-gap: 50px;
 }
 
 
@@ -589,6 +843,7 @@ img.profile-pic{
      font-family: 'Inter', sans-serif;
      margin-top: 100px;
      margin-bottom: 50px;
+
 }
 
 .teacher-info-fullbox{
@@ -616,6 +871,7 @@ img.profile-pic{
 .teacher-info-fullbox h3{
     font-size: 38px;
     font-weight: 700;
+    margin-top: 20px;
 }
 .list-items-box{
     display: flex;
@@ -674,6 +930,7 @@ img.profile-pic{
 
 .teacher-info-fullbox{
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
 }
@@ -737,6 +994,8 @@ img.profile-pic{
 }
 .feedback-fullbox{
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
     justify-content: space-between;
     margin-top: 50px;
 }
@@ -758,6 +1017,8 @@ img.profile-pic{
 
 .footer-fullbox{
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
     width: 90%;
     margin: auto;
     justify-content: space-between;
@@ -821,4 +1082,235 @@ img.profile-pic{
     font-weight: 400;
     color: white;
     margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575.98px){
+
+   .navbar nav{
+    position: relative;
+  }
+
+  .navbar nav ul{
+    position: absolute;
+    top: 70px;
+    right: -270px;  
+    width: 220px;
+    height: 100vh;
+    background: #777;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+
+  #menu-toggle:checked ~ ul{
+    right: 0;
+  }
+
+  .navbar .click-bar{
+    display: block;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 575.98px){
+
+  .hero{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero div h2{
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero div h2::first-letter{
+    font-size: 44px;
+  }
+
+  .hero div p{
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0 10px;
+    /* margin-left: -50px; */
+    width: 100%;
+    text-align: justify;
+  }
+
+
+  .img-back{
+    width: 280px;
+    height: 280px;
+    /* margin: auto; */
+    /* margin-left: -100px; */
+    margin-top: 30px;
+  }
+
+  .img-back2{
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+  }
+
+  .main-pic{
+    width: 260px;
+    height: auto;
+    margin: -50px auto 50px;
+  }
+
+
+  .box-student{
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 190px !important;
+    font-size: 12px;
+    margin-top: -250px !important;
+    position: absolute;
+  }
+
+  .box-student img{
+    width: 70px !important;
+  }
+
+  .box-student2{
+    width: 100px;
+    height: 60px;
+    margin-left: -40px;
+    /* margin-top: 150px; */
+  }
+
+  .box-student2 img{
+    width: 90px;
+  }
+
+  .box-student3{
+    width: 100px;
+    height: 45px;
+    margin-left: -70px;
+    margin-top: 40px;
+  }
+
+  .box-student3 p{
+    font-size: 10px !important;
+  }
+
+  .box-student3 i{
+    margin-left: -70px;
+  }
+
+  .hero-container button,
+  .hero-container a{
+    display: inline-block;
+    margin: 15px auto;
+  }
+
+
+  .tool-conatiner .tool-box img{
+    width: 50px !important;
+    margin-left: -30px;
+  }
+   .tool-conatiner .tool-box{
+    margin: auto !important;
+   }
+   
+
+
+ 
+
+  
+
+   .search-course-img-box img{
+    width: 130px;
+    height: 200px;
+   }
+ .search-course-img-box{
+          width: 300px;
+          margin: auto;
+   }
+
+   .Online-Degrees{
+    display: block;
+    width: 90% !important;
+    margin: auto;
+   }
+   .search-course-content-box{
+    width: 100%;
+    margin: auto ;
+    margin-top: 20px;
+}
+
+.search-box {
+    margin-left: 0px;
+
+}
+.search-box input::placeholder{
+    font-size: 16px;
+}
+.search-course-main button{
+    font-size: 20px;
+    width: 200px;
+}
+.Online-Degrees{
+    margin-top: 40px;
+    display: flex;
+}
+.Online-Degrees i{
+    align-items: center;
+    margin-top: 20px;
+}
+.Online-Degrees div h4{
+    font-size: 23px;
+}
+.Online-Degrees div p{
+    font-size: 15px;
+}
+.teacher-info-fullbox h2{
+    font-size: 30px;
+    width: 100% !important;
+}
+.teacher-info-fullbox p{
+    font-size: 17px;
+    width: 100% !important;
+   
+}
+.list-items-box ul li{
+    font-size: 14px;
+}
+.list-items-box{
+    gap: 20px;
+}
+.teacher-info-fullbox button{
+    width: 300px;
+   top: 430px;
+    position: relative;
+}
+.border-box{
+margin-bottom: 100px;
+margin-top: -100px;
+}
+
+.teacher-info-fullbox{
+flex-wrap: wrap;
+}
+
+
+
+
 }
